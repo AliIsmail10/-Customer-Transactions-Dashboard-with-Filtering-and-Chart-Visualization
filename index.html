@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Transactions</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Customer Transactions</h1>
+    <div class="filters">
+      <input type="text" id="customerFilter" placeholder="Filter by customer name">
+      <input type="number" id="amountFilter" placeholder="Filter by transaction amount">
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Customer Name</th>
+          <th>Transaction Amount</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="transactionTableBody">
+        <!-- Rows will be dynamically generated here -->
+      </tbody>
+    </table>
+    <div class="chart-container" style="display:none;">
+      <canvas id="transactionChart">
+        
+      </canvas>
+    </div>
+    <div id="chartMessage"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
